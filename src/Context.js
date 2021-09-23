@@ -21,6 +21,8 @@ import {
 
 const AppContext = React.createContext();
 
+// https://addons.mozilla.org/es/firefox/addon/access-control-allow-origin/ had to use the next mozilla/google chrome extension due to cors error
+
 // Check user authentication at page refresh
 const checkLogin = () => {
     if (window.localStorage.getItem("token")) {
