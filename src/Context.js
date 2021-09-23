@@ -17,7 +17,6 @@ import {
     DEL_GOOD,
     DEL_BAD,
 } from "./Reducer/actions";
-import userEvent from "@testing-library/user-event";
 
 const AppContext = React.createContext();
 
