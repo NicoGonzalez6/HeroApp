@@ -31,7 +31,7 @@ const SearchForm = () => {
                 {({ errors }) => {
                     return (
                         <Form>
-                            <label>Search your favorite Heroe or Villain</label>
+                            <label>Search your favorite character</label>
                             <div className="input-search">
                                 <GoSearch></GoSearch>
                                 <Field type="text" name="name"></Field>

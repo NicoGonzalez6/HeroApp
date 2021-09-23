@@ -14,8 +14,8 @@
     height: 64px;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid #d53042;
-    border-color: #d53042 transparent #d53042 transparent;
+    border: 6px solid var(--clr-primary);
+    border-color: var(--clr-primary) transparent var(--clr-primary) transparent;
     animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {
@@ -27,27 +27,38 @@
     }
 }
 /*===================spinner===================*/
-:root {
+.red-theme {
     /* dark shades of primary color*/
     --clr-primary-darker: #d0192d;
     /* primary/main color */
     --clr-primary: #d53042;
-    /* lighter shades of primary color */
-    --clr-primary-6: hsl(205, 89%, 70%);
-    /* darkest grey - used for headings */
+    /* Secundary Colors and utilities*/
     --clr-success: #25bb32;
-    /* grey used for paragraphs */
     --clr-danger: #bb2525;
-
     --clr-white: #fff;
     --clr-white-darker: #f7f6f6;
-
-    --clr-red-light: hsl(360, 71%, 66%);
-
     --clr-black: #222;
     --light-shadow: 0 10px 10px rgba(0, 0, 0, 0.308);
     --dark-shadow: 0 8px 8px rgba(0, 0, 0, 0.452);
+    transition: 0.8s ease-in-out;
 }
+
+.blue-theme {
+    /* dark shades of primary color*/
+    --clr-primary-darker: #3b35d2;
+    /* primary/main color */
+    --clr-primary: #4c47c4;
+    /* Secundary Colors and utilities*/
+    --clr-success: #25bb32;
+    --clr-danger: #bb2525;
+    --clr-white: #fff;
+    --clr-white-darker: #f7f6f6;
+    --clr-black: #222;
+    --light-shadow: 0 10px 10px rgba(0, 0, 0, 0.308);
+    --dark-shadow: 0 8px 8px rgba(0, 0, 0, 0.452);
+    transition: 0.8s ease-in-out;
+}
+
 body {
     margin: 0;
     padding-top: 0;
@@ -75,7 +86,6 @@ h1,
 h2,
 h3,
 h4 {
-    letter-spacing: var(--spacing);
     text-transform: capitalize;
     line-height: 1.25;
     margin-bottom: 0.75rem;

@@ -30,7 +30,7 @@ const Chart = ({ data }) => {
         dataSource: {
             // Chart Configuration
             chart: {
-                baseFontColor: "#d0192d",
+                baseFontColor: "#222",
                 borderRadius: "20",
                 bgColor: "#e8f3f1",
                 //Set the chart caption

@@ -41,7 +41,7 @@ const Team = () => {
     const avgData = [
         {
             label: "height",
-            value: heightWeight.weight,
+            value: heightWeight.height,
         },
         {
             label: "weight",

@@ -236,7 +236,7 @@ const Wrapped = styled.section`
             padding: 10px;
             border-radius: 10px;
             text-decoration: none;
-            background: #d53042;
+            background: var(--clr-primary);
             color: var(--clr-white);
         }
 

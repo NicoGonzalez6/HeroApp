@@ -130,7 +130,7 @@ const Wrapper = styled.div`
         backface-visibility: hidden;
         transform: rotateY(180deg);
         cursor: pointer;
-        background: #d94757;
+        background: var(--clr-primary);
         text-align: center;
     }
 

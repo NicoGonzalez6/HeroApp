@@ -21,6 +21,7 @@ import userEvent from "@testing-library/user-event";
 
 const AppContext = React.createContext();
 
+// Check user authentication at page refresh
 const checkLogin = () => {
     if (window.localStorage.getItem("token")) {
         const initialState = {
@@ -48,16 +49,30 @@ const checkLogin = () => {
     }
 };
 const AppProvider = ({ children }) => {
+    const [state, dispatch] = useReducer(reducer, checkLogin());
     const [powerStats, setPowerStats] = useState({});
     const [heightWeight, setHeightWeight] = useState([]);
-    const [state, dispatch] = useReducer(reducer, checkLogin());
     const [isLoading, setIsLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState({
         type: "",
         msg: "",
         active: false,
     });
+    const [theme, setTheme] = useState("red-theme");
 
+    useEffect(() => {
+        document.documentElement.className = theme;
+    }, [theme]);
+
+    const themeHandler = () => {
+        if (theme === "red-theme") {
+            setTheme("blue-theme");
+        } else {
+            setTheme("red-theme");
+        }
+    };
+
+    // Axios .POST LOGIN
     const sendData = async () => {
         try {
             if (state.email && state.password) {
@@ -77,6 +92,7 @@ const AppProvider = ({ children }) => {
         }
     };
 
+    // axios .GET FOR NAME
     const fetchData = async (name) => {
         setIsLoading(true);
         try {
@@ -99,11 +115,13 @@ const AppProvider = ({ children }) => {
             console.log(error);
         }
     };
+
     // Logout
     const exitUser = () => {
         dispatch({ type: SET_EXIT });
         window.localStorage.removeItem("token");
     };
+
     //post login info
     useEffect(() => {
         sendData();
@@ -131,6 +149,7 @@ const AppProvider = ({ children }) => {
         };
     }, [errorMsg]);
 
+    // full team Selection
     const teamSelection = (id) => {
         const newHero = state.search.filter((e) => e.id === id);
 
@@ -176,7 +195,7 @@ const AppProvider = ({ children }) => {
             }
         });
     };
-
+    // GOOD team
     const goodAlignment = (newHero) => {
         if (state.good.length <= 2) {
             dispatch({ type: SET_GOOD, payload: newHero });
@@ -189,7 +208,7 @@ const AppProvider = ({ children }) => {
             });
         }
     };
-
+    // BAD TEAM
     const badAlignment = (newHero) => {
         if (state.bad.length <= 2) {
             dispatch({ type: SET_BAD, payload: newHero });
@@ -202,7 +221,7 @@ const AppProvider = ({ children }) => {
             });
         }
     };
-
+    // Delete team Member
     const dltFromTeam = (id) => {
         const newHero = state.team.filter((e) => e.id !== id);
         const oldHero = state.team.filter((e) => e.id === id);
@@ -218,11 +237,11 @@ const AppProvider = ({ children }) => {
         });
         dispatch({ type: SET_DELETE_TEAM, payload: newHero });
     };
-
+    // Delete full team
     const clearTeam = () => {
         dispatch({ type: SET_DELETE_TEAM });
     };
-
+    // Team powerStats
     const setStats = () => {
         let Combat = 0;
         let Durability = 0;
@@ -281,7 +300,7 @@ const AppProvider = ({ children }) => {
             });
         }
     };
-
+    // Team Avrg height-wieght.
     const avgTeamWeight = () => {
         let wieghtValue = 0;
         let heightValue = 0;
@@ -312,9 +331,11 @@ const AppProvider = ({ children }) => {
             });
         }
     }, [state.team]);
+
     return (
         <AppContext.Provider
             value={{
+                themeHandler,
                 setIsLoading,
                 heightWeight,
                 powerStats,

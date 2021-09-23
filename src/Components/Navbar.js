@@ -3,14 +3,19 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useGlobalContext } from "../Context";
 const Navbar = () => {
-    const { exitUser } = useGlobalContext();
+    const { exitUser, themeHandler } = useGlobalContext();
     return (
         <Wrapper>
             <header className="nav-center">
                 <h1>Heroes APP</h1>
-                <Link to="/login" onClick={exitUser}>
-                    Log Out
-                </Link>
+                <div className="btn-navbar">
+                    <Link to="/login" onClick={exitUser}>
+                        Log Out
+                    </Link>
+                    <button className="btn-theme" onClick={themeHandler}>
+                        Theme
+                    </button>
+                </div>
             </header>
         </Wrapper>
     );
@@ -22,7 +27,7 @@ const Wrapper = styled.nav`
     height: 5rem;
     margin:0:
     padding:0;
-    background: #D0192D;
+    background: var(--clr-primary);
     color:var(--clr-white);
     box-shadow:var(--dark-shadow);
     
@@ -35,16 +40,30 @@ const Wrapper = styled.nav`
         margin:0 auto
     };
 
-    .nav-center h1{
-    };
-    .nav-center a{
+    
+    .btn-navbar{
         transform:translateY(5px);
+        display:flex;
+        heigth:5rem;
+        width:50%;
+        justify-content:flex-end;
+        align-items:center;
+        gap:10px;
+    }
+
+    .nav-center a{
         text-decoration:none;
         display:block; 
         color:var(--clr-white);
-        text-align:end;
-        font-size:18px
+        font-size:16px
 
+    }
+    .btn-theme{
+        font-size:14px;
+        background:var(--clr-white);
+        border:none;
+        color:var(--clr-primary);
+        border-radius:5px;
     }
     
 
@@ -56,6 +75,7 @@ const Wrapper = styled.nav`
         width:70%;
         margin:0 auto
     };
+    
     .nav-center h1{
         padding-bottom:2px;
     };
@@ -65,8 +85,30 @@ const Wrapper = styled.nav`
     } 
     .nav-center a:hover{
         margin-bottom:-1px;
-        border-bottom:1px solid #fff
+        border-bottom:1px solid var(--clr-white)
     } 
 
+    .btn-navbar{
+        transform:translateY(5px);
+        display:flex;
+        heigth:5rem;
+        width:40%;
+        justify-content:flex-end;
+        align-items:center;
+        gap:30px;
+    }
+
+    .btn-theme{
+        font-size:16px;
+        background:var(--clr-white);
+        border:none;
+        color:var(--clr-primary);
+        border-radius:5px;
+        padding:5px 10px;
+        cursor:pointer;
+    }
+    .btn-theme:hover{
+        background:var(--clr-white-darker);  
+    }
 }
 `;

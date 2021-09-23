@@ -43,7 +43,7 @@ const Wrapper = styled.section`
         border-radius: 10px;
         text-decoration: none;
         background: #d53042;
-        color: var(--clr-white: #fff);
+        color: var(--clr-white);
         cursor: pointer;
     }
 
