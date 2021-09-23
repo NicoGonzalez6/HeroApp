@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable eqeqeq */
 /* eslint-disable array-callback-return */
 /* eslint-disable react-hooks/exhaustive-deps */
@@ -47,6 +48,16 @@ const checkLogin = () => {
         return initialState;
     }
 };
+// Check Theme
+const checkTheme = () => {
+    let theme = "red-theme";
+    if (window.localStorage.getItem("theme")) {
+        let theme = window.localStorage.getItem("theme");
+        return theme;
+    } else {
+        return theme;
+    }
+};
 const AppProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, checkLogin());
     const [powerStats, setPowerStats] = useState({});
@@ -57,10 +68,11 @@ const AppProvider = ({ children }) => {
         msg: "",
         active: false,
     });
-    const [theme, setTheme] = useState("red-theme");
+    const [theme, setTheme] = useState(checkTheme());
 
     useEffect(() => {
         document.documentElement.className = theme;
+        window.localStorage.setItem("theme", theme);
     }, [theme]);
 
     const themeHandler = () => {

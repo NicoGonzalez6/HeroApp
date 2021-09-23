@@ -55,15 +55,16 @@ const Wrapper = styled.nav`
         text-decoration:none;
         display:block; 
         color:var(--clr-white);
-        font-size:16px
+        font-size:18px
 
     }
     .btn-theme{
-        font-size:14px;
+        font-size:16px;
         background:var(--clr-white);
         border:none;
         color:var(--clr-primary);
         border-radius:5px;
+        cursor:pointer;
     }
     
 

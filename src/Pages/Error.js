@@ -28,13 +28,14 @@ const Wrapper = styled.section`
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 90%;
         margin: 0 auto;
         height: 300px;
         border-radius: 10px;
         gap: 30px;
         background: var(--clr-white-darker);
         box-shadow: var(--light-shadow);
+        text-align: center;
     }
 
     a {
@@ -42,12 +43,41 @@ const Wrapper = styled.section`
         padding: 10px;
         border-radius: 10px;
         text-decoration: none;
-        background: #d53042;
+        background: var(--clr-primary);
         color: var(--clr-white);
         cursor: pointer;
     }
 
     a:hover {
         background: var(--clr-primary-darker);
+    }
+
+    @media (min-width: 800px) {
+        .errorPage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            margin: 0 auto;
+            height: 300px;
+            border-radius: 10px;
+            gap: 30px;
+            background: var(--clr-white-darker);
+            box-shadow: var(--light-shadow);
+        }
+
+        a {
+            margin: 15px auto;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            background: #d53042;
+            color: var(--clr-white);
+            cursor: pointer;
+        }
+
+        a:hover {
+            background: var(--clr-primary-darker);
+        }
     }
 `;

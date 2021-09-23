@@ -17,6 +17,7 @@ const SearchForm = () => {
                     let errors = {};
 
                     if (values.name) {
+                        return;
                     } else {
                         errors.name = "Please enter a value";
                     }
