@@ -102,11 +102,11 @@ const Wrapper = styled.section`
     .avg-PowerStats {
         width: 100%;
         margin-top: 20px;
-        transform: translateX(-20px);
+        transform: translateX(-10px);
     }
 
     .avg-PowerStats h1 {
-        transform: translateX(30px);
+        transform: translateX(10px);
     }
 
     .avg-weight {
