@@ -1,0 +1,12 @@
+export const SET_EMAIL = "SET_EMAIL";
+export const SET_CLEAN = "SET_CLEAN";
+export const SET_ERROR = "SET_ERROR";
+export const SET_SUCCESS = "SET_SUCCESS ";
+export const SET_EXIT = "SET_EXIT";
+export const SET_SEARCH = "SET_SEARCH";
+export const SET_TEAM = "SET_TEAM";
+export const SET_GOOD = "SET_GOOD";
+export const SET_BAD = "SET_BAD";
+export const SET_DELETE_TEAM = "SET_DELETE_TEAM";
+export const DEL_GOOD = "DEL_GOOD";
+export const DEL_BAD = "DEL_BAD";
