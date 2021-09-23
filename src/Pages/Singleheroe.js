@@ -11,7 +11,6 @@ const Singleheroe = () => {
     const { setIsLoading } = useGlobalContext();
     const { id } = useParams();
     const [singleHero, setSingleHero] = useState({});
-    console.log(singleHero);
 
     const fetchData = async (id) => {
         setIsLoading(true);

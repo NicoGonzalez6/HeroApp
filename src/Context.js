@@ -22,7 +22,7 @@ import userEvent from "@testing-library/user-event";
 const AppContext = React.createContext();
 
 const checkLogin = () => {
-    if (window.localStorage) {
+    if (window.localStorage.getItem("token")) {
         const initialState = {
             email: "",
             password: "",
