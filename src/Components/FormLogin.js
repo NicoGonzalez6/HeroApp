@@ -120,7 +120,7 @@ const Wrapper = styled.section`
     }
     .titleForm {
         margin-top: 17px;
-        color: #d53042;
+        color: var(--clr-primary);
     }
 
     .titleForm h1 {
@@ -150,20 +150,20 @@ const Wrapper = styled.section`
     }
 
     .inputs-container input {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid var(--clr-black);
     }
 
     .error {
-        color: red;
+        color: var(--clr-primary);
         font-size: 15px;
     }
 
     .icon:hover {
-        color: #d0192d;
+        color: var(--clr-primary-darker);
     }
     .errorText {
         text-align: center;
-        color: red;
+        color: var(--clr-primary-5);
     }
 `;
 

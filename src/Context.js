@@ -162,7 +162,7 @@ const AppProvider = ({ children }) => {
                         msg: "villain already in the team",
                         active: true,
                     });
-                    // eslint-disable-next-line array-callback-return
+
                     return;
                 } else {
                     setErrorMsg({

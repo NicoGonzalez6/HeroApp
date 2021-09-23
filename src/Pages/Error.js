@@ -33,7 +33,7 @@ const Wrapper = styled.section`
         height: 300px;
         border-radius: 10px;
         gap: 30px;
-        background: #f7f6f6;
+        background: var(--clr-white-darker);
         box-shadow: var(--light-shadow);
     }
 
@@ -43,11 +43,11 @@ const Wrapper = styled.section`
         border-radius: 10px;
         text-decoration: none;
         background: #d53042;
-        color: #fff;
+        color: var(--clr-white: #fff);
         cursor: pointer;
     }
 
     a:hover {
-        background: #be2a3b;
+        background: var(--clr-primary-darker);
     }
 `;

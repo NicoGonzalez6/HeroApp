@@ -23,7 +23,7 @@ const Wrapper = styled.nav`
     margin:0:
     padding:0;
     background: #D0192D;
-    color:var(--clr-primary-10);
+    color:var(--clr-white);
     box-shadow:var(--dark-shadow);
     
     .nav-center{
@@ -41,7 +41,7 @@ const Wrapper = styled.nav`
         transform:translateY(5px);
         text-decoration:none;
         display:block; 
-        color:#fff;
+        color:var(--clr-white);
         text-align:end;
         font-size:18px
 

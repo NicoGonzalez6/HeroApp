@@ -43,7 +43,7 @@ const Wrapper = styled.article`
     }
     .Title-img {
         width: 100%;
-        background: #d0192d;
+        background: var(--clr-primary);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -67,7 +67,7 @@ const Wrapper = styled.article`
 
     .form {
         width: 100%;
-        background: #fff;
+        background: var(--clr-white);
     }
 
     @media (min-width: 800px) {

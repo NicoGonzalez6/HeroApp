@@ -120,7 +120,7 @@ const Wrapper = styled.div`
         width: 250px;
         height: 320px;
         backface-visibility: hidden;
-        color: black;
+        color: var(--clr-black);
     }
 
     .theBack {

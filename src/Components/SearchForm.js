@@ -103,7 +103,7 @@ const Wrapper = styled.section`
     }
     input {
         width: 90%;
-        border-bottom: 2px solid var(--clr-primary-2);
+        border-bottom: 1px solid var(--clr-black);
     }
 
     @media (min-width: 800px) {

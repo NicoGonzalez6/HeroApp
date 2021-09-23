@@ -47,11 +47,11 @@ const Wrapper = styled.div`
         margin: 0 auto;
         display: block;
         height: auto;
-        background: #d53042;
+        background: var(--clr-primary);
         border: none;
         outline: none;
         border-radius: 5px;
-        color: #fff;
+        color: var(--clr-white);
         font-size: 15px;
         font-family: "Roboto Slab", serif;
         cursor: pointer;
@@ -59,6 +59,9 @@ const Wrapper = styled.div`
         transition: ease-in-out;
     }
 
+    .buttons-cards:hover {
+        background: var(--clr-primary-darker);
+    }
     @media (min-width: 800px) {
         width: 200px;
         height: 350px;
@@ -76,15 +79,19 @@ const Wrapper = styled.div`
             display: block;
             height: auto;
             padding: 4px;
-            background: #d53042;
+            background: var(--clr-primary);
             border: none;
             outline: none;
             border-radius: 5px;
-            color: #fff;
+            color: var(--clr-white);
             font-size: 15px;
             font-family: "Roboto Slab", serif;
             cursor: pointer;
             letter-spacing: 1px;
+        }
+
+        .buttons-cards:hover {
+            background: var(--clr-primary-darker);
         }
 
         img {
